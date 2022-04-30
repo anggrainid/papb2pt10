@@ -61,8 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     mCanvas = new Canvas(mBitmap);
                     mCanvas.drawColor(mColorBackground);
                     mCanvas.drawText("Keep Tapping", 100, 100, mPaintText);
-
-
+                    mOffset += OFFSET;
                 }
                 else{
                     if (mOffset < halfWidth && mOffset < halfHeight){
@@ -84,11 +83,8 @@ public class MainActivity extends AppCompatActivity {
                         int y = mBounds.centerY();
 
                         mCanvas.drawText(text, halfWidth-x, halfHeight-y, mPaintText);
-
                     }
-
                 }
-
                 view.invalidate();
             }
         });
